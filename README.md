@@ -1,7 +1,6 @@
 # MDLP discretized Fashion-MNIST and Handwritten Digits-MNIST datasets
 
-[![License: MIT]
-(https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![License: MIT] (https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![License: CC BY-SA 3.0](https://img.shields.io/badge/License-CC%20BY--SA%203.0-lightgrey.svg)](https://creativecommons.org/licenses/by-sa/3.0/)
 
 <details><summary>Table of Contents</summary><p>
