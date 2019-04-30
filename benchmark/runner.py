@@ -5,6 +5,9 @@ import time
 from ast import literal_eval as make_tuple
 from multiprocessing import Process, Queue
 
+import warnings
+warnings.simplefilter(action='ignore', category=FutureWarning)
+
 import numpy as np
 import psutil
 from sklearn import preprocessing
@@ -39,9 +42,9 @@ class JobWorker(Process):
         self.pending_q = pending_q
         X, self.Y = mnist_reader.load_mnist(path=DATA_DIR, kind='train')
         Xt, self.Yt = mnist_reader.load_mnist(path=DATA_DIR, kind='t10k')
-        scaler = preprocessing.StandardScaler().fit(X)
-        self.X = scaler.transform(X)
-        self.Xt = scaler.transform(Xt)
+        scaler = preprocessing.StandardScaler().fit(X.astype(float))
+        self.X = scaler.transform(X.astype(float))
+        self.Xt = scaler.transform(Xt.astype(float))
         # self.X = X[:100]
         # self.Y = self.Y[:100]
 
@@ -103,7 +106,7 @@ class JobWorker(Process):
 
 
 class JobManager:
-    def __init__(self, num_worker: int = 2, num_repeat: int = 2, do_shuffle: bool = False,
+    def __init__(self, num_worker: int = 8, num_repeat: int = 10, do_shuffle: bool = True,
                  respawn_memory_pct: float = 90):
         self.pending_q = Queue()
         self.num_worker = num_worker
@@ -164,7 +167,7 @@ class JobManager:
         total_clf = 0
         failed_clf = 0
         Xt, Yt = mnist_reader.load_mnist(path=DATA_DIR, kind='t10k')
-        Xt = preprocessing.StandardScaler().fit_transform(Xt)
+        Xt = preprocessing.StandardScaler().fit_transform(Xt.astype(float))
         Xs, Ys = shuffle(Xt, Yt)
         num_dummy = 10
         Xs = Xs[:num_dummy]
