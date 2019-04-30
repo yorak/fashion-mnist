@@ -98,8 +98,6 @@ As one of the Machine Learning community's most popular datasets, MNIST has insp
 ## Benchmark
 Zalando built an automatic benchmarking system based on `scikit-learn` that covers 129 classifiers (but no deep learning) with different parameters. [Find the results here](http://fashion-mnist.s3-website.eu-central-1.amazonaws.com/).
 
-<img src="doc/img/benchmark.gif" width="100%">
-
 You can reproduce the results by running `benchmark/runner.py`. Please see the original [zalandoresearch/fashion-mnist](https://github.com/zalandoresearch/fashion-mnist) for a table of results, and feel free to submit any interesting results with the MDLP discretized dataset.
 
 ## Contributing
