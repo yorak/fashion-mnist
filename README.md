@@ -122,7 +122,7 @@ For the MDLP method please cite:
 
 The fashion-MNIST data and utils use the MIT License (MIT) Copyright © [2017] Zalando SE, https://tech.zalando.com
 
-According to [kaggle.com](https://www.kaggle.com/c/atzb-mnist-digit-classification) the digits-MNIST data is licensed under (Creative Commons Attribution-Share Alike 3.0 license)[https://creativecommons.org/licenses/by-sa/3.0/].
+According to [kaggle.com](https://www.kaggle.com/c/atzb-mnist-digit-classification) the digits-MNIST data is licensed under [Creative Commons Attribution-Share Alike 3.0 license](https://creativecommons.org/licenses/by-sa/3.0/).
 
 The Python implementation of MDLP by Github user (navicto)[https://github.com/navicto] is licensed under GPLv3. It is included as a `git` submodule.
 
