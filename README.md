@@ -116,7 +116,6 @@ For digits-MNIST the corresponding paper is:
 For the MDLP method please cite:
 
 **Fayyad, Usama M.; Irani, Keki B. (1993) "Multi-Interval Discretization of Continuous-Valued Attributes for Classification Learning" , Proceedings of the International Joint Conference on Uncertainty in AI (Q334 .I571 1993), pp. 1022-1027.**
-**
 
 ## License
 
